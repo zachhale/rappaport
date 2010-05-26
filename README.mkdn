@@ -4,7 +4,7 @@ I combine this with a hosts file line:
 
     127.0.0.1 project.dev
   
-And a vhost:
+And an Apache vhost directive:
 
     <VirtualHost *:80>
     	ServerName 		project.dev
@@ -12,7 +12,16 @@ And a vhost:
     	RewriteCond 	%{REQUEST_FILENAME} !-f
     	RewriteRule		(.*) http://localhost:3200$1 [P]
     </VirtualHost>
-  
+
+And an alias in my `.bash_profile`:
+
+    alias ss="~/.rappaport/ss.rb"
+    
+Then I run it from any project directory like so:
+
+    $ cd /code/project
+    $ ss
+
 See rappaport.yml.example for example project definitions.
 
 ---
