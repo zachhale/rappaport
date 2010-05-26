@@ -2,16 +2,16 @@ My script for automatic configuration for my rails development serving.
 
 I combine this with a hosts file line:
 
-  127.0.0.1 project.dev
+    127.0.0.1 project.dev
   
 And a vhost:
 
-  <VirtualHost *:80>
-  	ServerName 		project.dev
-  	RewriteEngine On
-  	RewriteCond 	%{REQUEST_FILENAME} !-f
-  	RewriteRule		(.*) http://localhost:3200$1 [P]
-  </VirtualHost>
+    <VirtualHost *:80>
+    	ServerName 		project.dev
+    	RewriteEngine On
+    	RewriteCond 	%{REQUEST_FILENAME} !-f
+    	RewriteRule		(.*) http://localhost:3200$1 [P]
+    </VirtualHost>
   
 See rappaport.yml.example for example project definitions.
 
