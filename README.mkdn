@@ -14,3 +14,7 @@ And a vhost:
   </VirtualHost>
   
 See rappaport.yml.example for example project definitions.
+
+---
+
+This was based on someone else's initial implementation of the rappaport.yml idea for multiple rails apps. I don't remember who.
